@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Voting App</title>
+  <link rel="stylesheet" href="/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="stylesheets/style.css" />
+
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+    <a href="/" class="navbar-brand">Voters List</a>
+    <form class="form-inline" action="/search" >
+      <input class="form-control mr-sm-2" name="query" value='<%= query %>' type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">First</th>
+        <th scope="col">Last</th>
+        <th scope="col">Sex</th>
+        <th scope="col">Address</th>
+        <th scope="col">Aadhaar</th>
+        <th scope="col">Phone</th>
+        <th scope="col">City</th>
+        <th scope="col">State</th>
+        <th scope="col">Image</th>
+        <th scope="col">Voter Card</th>
+      </tr>
+    </thead>
+    <tbody>
+        <% for(var i=0; i < data.length; i++) { %>
+            <tr>
+                <th scope="row"><%= i+1 %></th>
+                <td><%= data[i].fname %></td>
+                <td><%= data[i].lname %></td>
+                <td><%= data[i].sex %></td>
+                <td><%= data[i].address %></td>
+                <td><%= data[i].aadhaar %></td>
+                <td><%= data[i].phone %></td>
+                <td><%= data[i].city %></td>
+                <td><%= data[i].state %></td>
+                <td><a href="<%= data[i].image %>" target="_blank">view</a></td>
+                <td><a href="<%= data[i].pdf %>" target="_blank">view</a></td>
+            </tr>
+        <% } %>
+    </tbody>
+  </table>
+</body>
+</html>

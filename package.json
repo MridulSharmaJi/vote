@@ -1,0 +1,32 @@
+{
+  "name": "nodejs-express-mongodb-template",
+  "version": "0.1.0",
+  "description": "NodeJS Anychart library usage template",
+  "private": true,
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "keywords": [
+    "AnyChart",
+    "javascript",
+    "mongo",
+    "express",
+    "template"
+  ],
+  "author": "AnyChart",
+  "dependencies": {
+    "bluebird": "^3.7.2",
+    "body-parser": "~1.15.1",
+    "bootstrap": "^4.5.0",
+    "cookie-parser": "^1.4.5",
+    "debug": "~2.2.0",
+    "ejs": "^3.1.3",
+    "express": "~4.13.4",
+    "mongoose": "^4.6.1",
+    "morgan": "~1.7.0",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.4",
+    "pdf-creator-node": "^1.4.1",
+    "serve-favicon": "~2.3.0"
+  }
+}
